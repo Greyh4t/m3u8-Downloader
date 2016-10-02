@@ -28,7 +28,7 @@ class Downloader:
 
     def run(self, m3u8_url, dir=''):
         self.dir = dir
-        if not os.path.isdir(self.dir):
+        if self.dir and not os.path.isdir(self.dir):
             os.makedirs(self.dir)
 
         r = self.session.get(m3u8_url, timeout=10)
