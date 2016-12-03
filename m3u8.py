@@ -92,4 +92,4 @@ class Downloader:
 
 if __name__ == '__main__':
     downloader = Downloader(50)
-    downloader.run('http://m3u8.test.com/test.m3u8', '/hoem/video/')
+    downloader.run('http://m3u8.test.com/test.m3u8', '/home/video/')
