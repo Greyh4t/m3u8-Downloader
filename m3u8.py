@@ -61,7 +61,7 @@ class Downloader:
             try:
                 r = self.session.get(url, timeout=20)
                 if r.ok:
-                    file_name = url.split('/')[-1]
+                    file_name = url.split('/')[-1].split('?')[0]
                     print file_name
                     with open(os.path.join(self.dir, file_name), 'wb') as f:
                         f.write(r.content)
